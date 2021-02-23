@@ -1,25 +1,42 @@
 """Реализация контроллеров на фреймворке"""
+from MFP.templator import render
 
 
 # PC. отдельные контроллеры на каждую страницу
 def index_view(request):
-    return '200', 'MAIN'
+    data = {
+        'title': 'главная',
+        'secret_key': request.get('secret_key')
+    }
+    page = render('index.jinja2', **data)
+    return '200', page
 
 
 def products_view(request):
-    return '200', 'products view'
+    data = {
+        'title': 'продукты',
+        'secret_key': request.get('secret_key')
+    }
+    page = render('index.jinja2', **data)
+    return '200', page
 
 
 def about_view(request):
-    return '200', 'about'
+    data = {
+        'title': 'о нас',
+        'secret_key': request.get('secret_key')
+    }
+    page = render('index.jinja2', **data)
+    return '200', page
 
 
 def contacts_view(request):
-    return '200', 'contact'
-
-# встроено во фреймворке
-# def page_404_view(request):
-#     return '404', [b'page_404']
+    data = {
+        'title': 'контакты',
+        'secret_key': request.get('secret_key')
+    }
+    page = render('index.jinja2', **data)
+    return '200', page
 
 
 # шаблон-копипаста

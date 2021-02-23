@@ -8,7 +8,6 @@ routes = {
     '/products/': products_view,
     '/about/': about_view,
     '/contacts/': contacts_view,
-    # '/page_404/': page_404_view
 }
 
 
@@ -31,6 +30,6 @@ def fc_is_admin(request):
 
 
 fronts_controllers = [fc_secret_key, fc_login, fc_password, fc_is_admin]
-# Создаём объект класса "приложение на MFP" и передаём ему: словарь
+# Создаём объект ласса "приложение на MFP" и передаём ему: словарь
 # url-контроллер; список фрон
 application = Application(routes, fronts_controllers)
