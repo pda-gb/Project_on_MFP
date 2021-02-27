@@ -17,7 +17,7 @@ def products_view(request):
         'title': 'продукты',
         'secret_key': request.get('secret_key')
     }
-    page = render('index.jinja2', **data)
+    page = render('products.jinja2', **data)
     return '200', page
 
 
@@ -26,7 +26,7 @@ def about_view(request):
         'title': 'о нас',
         'secret_key': request.get('secret_key')
     }
-    page = render('index.jinja2', **data)
+    page = render('about.jinja2', **data)
     return '200', page
 
 
@@ -35,7 +35,7 @@ def contacts_view(request):
         'title': 'контакты',
         'secret_key': request.get('secret_key')
     }
-    page = render('index.jinja2', **data)
+    page = render('contacts.jinja2', **data)
     return '200', page
 
 
